@@ -1,0 +1,10 @@
+## Drop the Duplicates if any
+hrt.duplicated()
+duplicated = hrt.duplicated().sum()
+if duplicated:
+    print('duplicates rows in dataset are:{}'.format(duplicated))
+else:
+    print('dataset contains no duplicate values')
+duplicated = hrt[hrt.duplicated(keep=False)]
+duplicated.head()
+hrt.drop_duplicates(keep = First, inplace = True)
