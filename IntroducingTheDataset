@@ -1,0 +1,31 @@
+### data anlaysis of Heart Disease UCI Dataset
+
+### Need to import required libraraies
+
+import os
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import missingno as msno # To visualize missing value
+import plotly.graph_objects as go # To Generate Graphs
+import plotly.express as px # To Generate box plot for statistical representation
+%matplotlib inline
+
+### Upload required Dataset through pandas
+import chardet    
+rawdata = open(r'C:\Users\sweth\OneDrive\Desktop\custmer\heart.csv', 'rb').read()
+result = chardet.detect(rawdata)
+charenc = result['encoding']
+print(charenc)
+
+##read the dataset
+hrt = pd.read_csv(r'C:\Users\sweth\OneDrive\Desktop\custmer\heart.csv')
+hrt.head(3)
+
+## using various options to know better about the dataset
+hrt.shape
+hrt.columns
+hrt.info()
+hrt.nunique()
+hrt.dtypes
