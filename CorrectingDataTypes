@@ -1,0 +1,5 @@
+## Correcting the Data types
+hrt['ca'].unique()
+hrt.ca.value_counts()
+hrt[hrt['ca']==4]
+hrt.loc[hrt['ca']==4,'ca']=np.NaN
